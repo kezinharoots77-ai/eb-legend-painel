@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E.B. LEGEND - Painel Administrativo</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #050505;
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 390px;
+  background: #101010;
+  border: 1px solid #24472e;
+  border-radius: 12px;
+  padding: 30px 22px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 27px;
+  margin-bottom: 5px;
+}
+
+.subtitulo {
+  color: #aaa;
+  margin-bottom: 30px;
+  font-size: 13px;
+}
+
+h2 {
+  font-size: 17px;
+  margin-bottom: 22px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #333;
+  border-radius: 7px;
+  background: #080808;
+  color: white;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: 1px solid #28743b;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #174b28;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  background: #226638;
+}
+
+.aviso {
+  color: #999;
+  font-size: 12px;
+  margin-top: 22px;
+  line-height: 1.5;
+}
+
+#mensagem {
+  color: #9bd4a7;
+  font-size: 13px;
+  margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>E.B. LEGEND</h1>
+
+  <p class="subtitulo">
+    PAINEL ADMINISTRATIVO
+  </p>
+
+  <h2>🔐 ACESSO RESTRITO</h2>
+
+  <form id="login">
+    <input
+      type="text"
+      id="username"
+      placeholder="Username do Roblox"
+      required
+    >
+
+    <input
+      type="password"
+      id="senha"
+      placeholder="Senha do painel 🔑"
+      required
+    >
+
+    <button type="submit">
+      ENTRAR
+    </button>
+  </form>
+
+  <p id="mensagem"></p>
+
+  <p class="aviso">
+    E.B. LEGEND<br>
+    Sistema de Gerenciamento Militar
+  </p>
+
+</div>
+
+<script>
+document.getElementById("login").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  document.getElementById("mensagem").textContent =
+    "Painel em configuração. Autenticação ainda não ativada.";
+});
+</script>
+
+</body>
+</html>
