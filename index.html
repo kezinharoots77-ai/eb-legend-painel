@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>E.B. LEGEND - Painel Administrativo</title>
+<title>E.B. LEGEND | Painel Administrativo</title>
 
 <style>
 * {
@@ -13,138 +13,196 @@
 
 body {
   margin: 0;
-  background: #050505;
+  background: #080b08;
   color: white;
   font-family: Arial, sans-serif;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
 }
 
-.container {
-  width: 100%;
-  max-width: 390px;
-  background: #101010;
-  border: 1px solid #24472e;
-  border-radius: 12px;
-  padding: 30px 22px;
+header {
+  background: #101810;
+  border-bottom: 2px solid #285b35;
+  padding: 25px 15px;
   text-align: center;
 }
 
-h1 {
-  font-size: 27px;
-  margin-bottom: 5px;
+.logo {
+  font-size: 38px;
+  margin-bottom: 8px;
 }
 
-.subtitulo {
-  color: #aaa;
-  margin-bottom: 30px;
-  font-size: 13px;
+header h1 {
+  margin: 0;
+  font-size: 25px;
+  letter-spacing: 2px;
 }
 
-h2 {
-  font-size: 17px;
-  margin-bottom: 22px;
-}
-
-input {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border: 1px solid #333;
-  border-radius: 7px;
-  background: #080808;
-  color: white;
-  font-size: 15px;
-}
-
-input:focus {
-  outline: 1px solid #28743b;
-}
-
-button {
-  width: 100%;
-  padding: 14px;
-  background: #174b28;
-  color: white;
-  border: none;
-  border-radius: 7px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:active {
-  background: #226638;
-}
-
-.aviso {
-  color: #999;
+header p {
+  color: #a6b5a6;
   font-size: 12px;
-  margin-top: 22px;
-  line-height: 1.5;
+  letter-spacing: 2px;
 }
 
-#mensagem {
-  color: #9bd4a7;
-  font-size: 13px;
-  margin-top: 15px;
+.container {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 15px;
+}
+
+.welcome {
+  background: #111a12;
+  border: 1px solid #294b30;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 25px;
+}
+
+.welcome h2 {
+  margin-top: 0;
+  color: #a7d6a9;
+}
+
+.welcome p {
+  color: #b9c4b9;
+  line-height: 1.6;
+}
+
+.status {
+  display: inline-block;
+  background: #183e22;
+  color: #a8e8b2;
+  border-radius: 20px;
+  padding: 7px 12px;
+  font-size: 11px;
+}
+
+.section-title {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #a7d6a9;
+}
+
+.menu {
+  display: grid;
+  gap: 13px;
+}
+
+.menu button {
+  background: #142519;
+  color: white;
+  border: 1px solid #356541;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: default;
+}
+
+.menu button span {
+  display: block;
+  color: #a8b8a9;
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 8px;
+}
+
+.menu button:disabled {
+  opacity: 0.85;
+}
+
+.notice {
+  margin-top: 25px;
+  padding: 15px;
+  border: 1px solid #66532a;
+  background: #211c10;
+  border-radius: 9px;
+  color: #e5d29b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  color: #788278;
+  padding: 30px 10px;
+  font-size: 11px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
+<header>
+  <div class="logo">🇧🇷</div>
   <h1>E.B. LEGEND</h1>
+  <p>EXÉRCITO BRASILEIRO</p>
+</header>
 
-  <p class="subtitulo">
-    PAINEL ADMINISTRATIVO
-  </p>
+<main class="container">
 
-  <h2>🔐 ACESSO RESTRITO</h2>
+  <section class="welcome">
+    <span class="status">● PAINEL EM DESENVOLVIMENTO</span>
 
-  <form id="login">
-    <input
-      type="text"
-      id="username"
-      placeholder="Username do Roblox"
-      required
-    >
+    <h2>PAINEL ADMINISTRATIVO</h2>
 
-    <input
-      type="password"
-      id="senha"
-      placeholder="Senha do painel 🔑"
-      required
-    >
+    <p>
+      Bem-vindo ao sistema administrativo
+      do Exército Brasileiro Legend.
+      Aqui serão realizadas as operações
+      administrativas dos militares.
+    </p>
+  </section>
 
-    <button type="submit">
-      ENTRAR
+  <h3 class="section-title">
+    GERENCIAMENTO MILITAR
+  </h3>
+
+  <section class="menu">
+
+    <button disabled>
+      ⭐ PROMOVER MILITAR
+      <span>
+        Sistema de promoções por hierarquia.
+        Em breve.
+      </span>
     </button>
-  </form>
 
-  <p id="mensagem"></p>
+    <button disabled>
+      🎖️ ENTREGAR DIVISÃO
+      <span>
+        Gerenciamento das divisões militares.
+        Em breve.
+      </span>
+    </button>
 
-  <p class="aviso">
-    E.B. LEGEND<br>
-    Sistema de Gerenciamento Militar
-  </p>
+    <button disabled>
+      ⚠️ REBAIXAR MILITAR
+      <span>
+        Sistema administrativo de rebaixamentos.
+        Em breve.
+      </span>
+    </button>
 
-</div>
+  </section>
 
-<script>
-document.getElementById("login").addEventListener("submit", function(event) {
-  event.preventDefault();
+  <div class="notice">
+    ⚠️ ATENÇÃO
 
-  document.getElementById("mensagem").textContent =
-    "Painel em configuração. Autenticação ainda não ativada.";
-});
-</script>
+    <br><br>
+
+    Este painel ainda está em desenvolvimento.
+    As funções administrativas não estão ativadas.
+    Nenhuma alteração será realizada no Roblox
+    através desta página.
+  </div>
+
+</main>
+
+<footer>
+  E.B. EXÉRCITO BRASILEIRO LEGEND
+  <br><br>
+  SISTEMA DE GERENCIAMENTO MILITAR
+</footer>
 
 </body>
 </html>
-
